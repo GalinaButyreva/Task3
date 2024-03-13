@@ -190,7 +190,7 @@ public class CacheInvocationHandler implements InvocationHandler {
     class SnapShotField implements SnapshotFieldInterface {
         private final Map<String, Object> fieldsSave = new HashMap<>();
         // Фиксируем  значения полей, состояние которых не отслеживаем
-        private void fieldsExcludeAddRemove(Map<String, Object>  fieldsCmp){
+        private void fieldsExcludeAdd(Map<String, Object>  fieldsCmp){
             if (!fieldsCmp.equals(fieldsSave))
                 for (String keySv : fieldsCmp.keySet()){
                     Object keySvVal = fieldsCmp.get(keySv);
