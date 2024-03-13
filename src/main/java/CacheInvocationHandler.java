@@ -131,7 +131,7 @@ public class CacheInvocationHandler implements InvocationHandler {
             else
             {
                 // Если вдруг появилось новое поле, которое не надо отслеживать, фиксируем его
-                curSnapAfter.fieldsExcludeAddRemove(curSnapBefore.getFieldsSave());
+                curSnapAfter.fieldsExcludeAdd(curSnapBefore.getFieldsSave());
             }
         }
         // Вернем результат
